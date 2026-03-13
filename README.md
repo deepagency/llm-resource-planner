@@ -2,7 +2,7 @@
 
 # 🧠 LLM Resource Planner
 
-**A high-performance CLI utility for calculating VRAM requirements before you deploy.**
+**The LLM Resource Planner is a high-performance Python CLI tool for estimating VRAM and memory requirements for Large Language Models (LLMs). By performing static analysis on Hugging Face model configurations, it helps developers perform AI infrastructure planning and deployment validation without needing to download massive model weights.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
