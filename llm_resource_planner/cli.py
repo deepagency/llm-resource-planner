@@ -1,5 +1,5 @@
 import os
-import requests
+import argparse
 from transformers import AutoConfig
 
 # ✅ Use environment variables for safety
@@ -59,9 +59,12 @@ def main(model_name):
     print(f"Memory (KV Cache @ 4k): {kv:.2f} GB")
     print(f"Total Recommended VRAM: {total:.2f} GB")
 
-if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("model", help="HF Model ID")
+def cli():
+    """CLI entrypoint used by setuptools."""
+    parser = argparse.ArgumentParser(description="LLM VRAM estimator")
+    parser.add_argument("model", help="HuggingFace model ID")
     args = parser.parse_args()
     main(args.model)
+
+if __name__ == "__main__":
+    cli()
