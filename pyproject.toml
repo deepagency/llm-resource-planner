@@ -16,8 +16,9 @@ authors = [
 
 dependencies = [
   'transformers',
-  'requests'
+  'argparse'
 ]
 
-[project-series]
-llm-plan = 'llm_resource_planner.cli:main'
+[project.scripts]
+llm-plan = 'llm_resource_planner.cli:cli'
+
