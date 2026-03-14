@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "llm-resource-planner"
-version = "0.1.0"
-description = 'Estimate VRAM requirements for HuggingFace LLMs without downloading model weights'
+version = "0.2.0"
+description = "CLI tool to estimate VRAM requirements and GPU fit for Hugging Face LLMs without downloading model weights"
 readme =  'README.md'
-license = {text = 'MIT'} 
+license = {text = 'MIT'}
 requires-python = '>=3.8'
 
 authors = [
@@ -21,4 +21,3 @@ dependencies = [
 
 [project.scripts]
 llm-plan = 'llm_resource_planner.cli:cli'
-
