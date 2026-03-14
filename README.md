@@ -75,6 +75,25 @@ llm-plan meta-llama/Meta-Llama-3-8B
 
 ---
 
+### GPU Fit Check
+
+You can optionally check whether a model fits within a given GPU memory budget:
+
+```bash
+llm-plan meta-llama/Meta-Llama-3-8B --gpu 24
+```
+
+Example output:
+
+```
+Total Recommended VRAM: 19.82 GB
+
+GPU Memory Provided: 24.00 GB
+✔ Model should fit in available VRAM
+```
+
+---
+
 ### What the Tool Does
 
 The planner retrieves a model's **configuration metadata** from Hugging Face using:
@@ -168,7 +187,7 @@ Some Hugging Face models require authentication.
 Set your Hugging Face token:
 
 ```bash
-export HUGGINGFACE_TOKEN="your_token_here"
+export HUGGINGFACE_API_TOKEN="your_token_here"
 ```
 
 The planner will automatically use the token when retrieving model metadata.
